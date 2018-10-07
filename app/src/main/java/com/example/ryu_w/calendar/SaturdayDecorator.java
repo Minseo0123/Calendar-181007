@@ -7,7 +7,10 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
 
+import java.time.Month;
 import java.util.Calendar;
+
+import static com.example.ryu_w.calendar.MainActivity.currentDay;
 
 public class SaturdayDecorator implements DayViewDecorator {
 
@@ -20,7 +23,8 @@ public class SaturdayDecorator implements DayViewDecorator {
     public boolean shouldDecorate(CalendarDay day){
         day.copyTo(calendar);
         int weekDay = calendar.get(Calendar.DAY_OF_WEEK);
-        return weekDay == Calendar.SATURDAY;
+
+        return weekDay == calendar.SATURDAY;
     }
 
     @Override
